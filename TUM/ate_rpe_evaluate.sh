@@ -1,14 +1,16 @@
 #!/bin/bash
 
 echo "./sh TRAJECTORY_DIR DATASET_NAME TOTAL_NUMBER"
-echo "DATASET: fr3_walk_xyz"
+echo "DATASET_NAME: fr3_walk_xyz, fr3_walk_half, fr3_walk_rpy, fr3_walk_static, fr3_sit_static"
 
 TRAJECTORY=$1
 NAME=$2
 TOTAL=$3
 
 # save result, if not exists, please creat this directory
-RESULT=$TRAJECTORY/result
+RESULT=$TRAJECTORY/result_frame
+
+mkdir $RESULT
 
 count=0
 
