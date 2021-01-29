@@ -1,0 +1,12 @@
+digraph G {
+"kinect" -> "openni_camera"[label="Broadcaster: /play_1610256046207228928\nAverage rate: 100.256 Hz\nMost recent transform: 1341846321.008 ( 268409733.064 sec old)\nBuffer length: 4.897 sec\n"];
+"world" -> "kinect"[label="Broadcaster: /play_1610256046207228928\nAverage rate: 100.256 Hz\nMost recent transform: 1341846321.008 ( 268409733.064 sec old)\nBuffer length: 4.897 sec\n"];
+"openni_camera" -> "openni_depth_frame"[label="Broadcaster: /play_1610256046207228928\nAverage rate: 10.187 Hz\nMost recent transform: 1341846320.943 ( 268409733.130 sec old)\nBuffer length: 4.810 sec\n"];
+"openni_camera" -> "openni_rgb_frame"[label="Broadcaster: /play_1610256046207228928\nAverage rate: 10.188 Hz\nMost recent transform: 1341846320.946 ( 268409733.126 sec old)\nBuffer length: 4.810 sec\n"];
+"openni_depth_frame" -> "openni_depth_optical_frame"[label="Broadcaster: /play_1610256046207228928\nAverage rate: 10.170 Hz\nMost recent transform: 1341846320.971 ( 268409733.101 sec old)\nBuffer length: 4.818 sec\n"];
+"openni_rgb_frame" -> "openni_rgb_optical_frame"[label="Broadcaster: /play_1610256046207228928\nAverage rate: 10.165 Hz\nMost recent transform: 1341846320.974 ( 268409733.098 sec old)\nBuffer length: 4.820 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1610256054.072"[ shape=plaintext ] ;
+ }->"world";
+}
